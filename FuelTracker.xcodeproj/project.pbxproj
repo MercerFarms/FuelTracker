@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D198AD6196DAB9D007E3BA4 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D198AD5196DAB9D007E3BA4 /* Data.m */; };
+		2D46DDB51A26F76400D9762C /* MercerCanyons_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D46DDB41A26F76400D9762C /* MercerCanyons_Logo.png */; };
+		2D86AB33196DB27500F6BFC5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D86AB32196DB27500F6BFC5 /* MessageUI.framework */; };
+		2DBFA0B1194A15F200BEA43B /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFA0B0194A15F200BEA43B /* Field.m */; };
+		2DBFA0B3194A209400BEA43B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBFA0B2194A209400BEA43B /* CoreLocation.framework */; };
+		2DE9F0851944F65E00B27B6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F0841944F65E00B27B6C /* Foundation.framework */; };
+		2DE9F0871944F65E00B27B6C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F0861944F65E00B27B6C /* CoreGraphics.framework */; };
+		2DE9F0891944F65E00B27B6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F0881944F65E00B27B6C /* UIKit.framework */; };
+		2DE9F08F1944F65E00B27B6C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DE9F08D1944F65E00B27B6C /* InfoPlist.strings */; };
+		2DE9F0911944F65E00B27B6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F0901944F65E00B27B6C /* main.m */; };
+		2DE9F0951944F65E00B27B6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F0941944F65E00B27B6C /* AppDelegate.m */; };
+		2DE9F0981944F65F00B27B6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE9F0961944F65F00B27B6C /* Main.storyboard */; };
+		2DE9F09B1944F65F00B27B6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F09A1944F65F00B27B6C /* ViewController.m */; };
+		2DE9F09D1944F65F00B27B6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE9F09C1944F65F00B27B6C /* Images.xcassets */; };
+		2DE9F0A41944F65F00B27B6C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F0A31944F65F00B27B6C /* XCTest.framework */; };
+		2DE9F0A51944F65F00B27B6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F0841944F65E00B27B6C /* Foundation.framework */; };
+		2DE9F0A61944F65F00B27B6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F0881944F65E00B27B6C /* UIKit.framework */; };
+		2DE9F0AE1944F65F00B27B6C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DE9F0AC1944F65F00B27B6C /* InfoPlist.strings */; };
+		2DE9F0B01944F65F00B27B6C /* FarmHandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F0AF1944F65F00B27B6C /* FarmHandTests.m */; };
+		2DE9F0BA19451F5700B27B6C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2DE9F0B919451F5700B27B6C /* Settings.bundle */; };
+		2DE9F114194540CA00B27B6C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F113194540CA00B27B6C /* SecondViewController.m */; };
+		2DF458A119A84A1800E7F4C6 /* Submit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF458A019A84A1800E7F4C6 /* Submit.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DE9F0A71944F65F00B27B6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DE9F0791944F65E00B27B6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DE9F0801944F65E00B27B6C;
+			remoteInfo = FarmHand;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D198AD4196DAB9D007E3BA4 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		2D198AD5196DAB9D007E3BA4 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		2D46DDB41A26F76400D9762C /* MercerCanyons_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MercerCanyons_Logo.png; path = ../../../../../Dropbox/FarmHand/MercerCanyons_Logo.png; sourceTree = "<group>"; };
+		2D86AB32196DB27500F6BFC5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		2DBFA0AF194A15F200BEA43B /* Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Field.h; sourceTree = "<group>"; };
+		2DBFA0B0194A15F200BEA43B /* Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Field.m; sourceTree = "<group>"; };
+		2DBFA0B2194A209400BEA43B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2DE9F0811944F65E00B27B6C /* FuelTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuelTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE9F0841944F65E00B27B6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2DE9F0861944F65E00B27B6C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2DE9F0881944F65E00B27B6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2DE9F08C1944F65E00B27B6C /* FuelTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FuelTracker-Info.plist"; sourceTree = "<group>"; };
+		2DE9F08E1944F65E00B27B6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2DE9F0901944F65E00B27B6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2DE9F0921944F65E00B27B6C /* FuelTracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FuelTracker-Prefix.pch"; sourceTree = "<group>"; };
+		2DE9F0931944F65E00B27B6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2DE9F0941944F65E00B27B6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2DE9F0971944F65F00B27B6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2DE9F0991944F65F00B27B6C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2DE9F09A1944F65F00B27B6C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2DE9F09C1944F65F00B27B6C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2DE9F0A21944F65F00B27B6C /* FuelTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuelTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE9F0A31944F65F00B27B6C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2DE9F0AB1944F65F00B27B6C /* FuelTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FuelTrackerTests-Info.plist"; sourceTree = "<group>"; };
+		2DE9F0AD1944F65F00B27B6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2DE9F0AF1944F65F00B27B6C /* FarmHandTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarmHandTests.m; sourceTree = "<group>"; };
+		2DE9F0B919451F5700B27B6C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		2DE9F112194540CA00B27B6C /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		2DE9F113194540CA00B27B6C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		2DF4589F19A84A1800E7F4C6 /* Submit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Submit.h; sourceTree = "<group>"; };
+		2DF458A019A84A1800E7F4C6 /* Submit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Submit.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DE9F07E1944F65E00B27B6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D86AB33196DB27500F6BFC5 /* MessageUI.framework in Frameworks */,
+				2DBFA0B3194A209400BEA43B /* CoreLocation.framework in Frameworks */,
+				2DE9F0871944F65E00B27B6C /* CoreGraphics.framework in Frameworks */,
+				2DE9F0891944F65E00B27B6C /* UIKit.framework in Frameworks */,
+				2DE9F0851944F65E00B27B6C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DE9F09F1944F65F00B27B6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DE9F0A41944F65F00B27B6C /* XCTest.framework in Frameworks */,
+				2DE9F0A61944F65F00B27B6C /* UIKit.framework in Frameworks */,
+				2DE9F0A51944F65F00B27B6C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DE9F0781944F65E00B27B6C = {
+			isa = PBXGroup;
+			children = (
+				2DE9F08A1944F65E00B27B6C /* FarmHand */,
+				2DE9F0A91944F65F00B27B6C /* FarmHandTests */,
+				2DE9F0831944F65E00B27B6C /* Frameworks */,
+				2DE9F0821944F65E00B27B6C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DE9F0821944F65E00B27B6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DE9F0811944F65E00B27B6C /* FuelTracker.app */,
+				2DE9F0A21944F65F00B27B6C /* FuelTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DE9F0831944F65E00B27B6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D86AB32196DB27500F6BFC5 /* MessageUI.framework */,
+				2DBFA0B2194A209400BEA43B /* CoreLocation.framework */,
+				2DE9F0841944F65E00B27B6C /* Foundation.framework */,
+				2DE9F0861944F65E00B27B6C /* CoreGraphics.framework */,
+				2DE9F0881944F65E00B27B6C /* UIKit.framework */,
+				2DE9F0A31944F65F00B27B6C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2DE9F08A1944F65E00B27B6C /* FarmHand */ = {
+			isa = PBXGroup;
+			children = (
+				2DE9F0BB1945268800B27B6C /* Images */,
+				2DE9F0931944F65E00B27B6C /* AppDelegate.h */,
+				2DE9F0941944F65E00B27B6C /* AppDelegate.m */,
+				2DE9F0961944F65F00B27B6C /* Main.storyboard */,
+				2DE9F0991944F65F00B27B6C /* ViewController.h */,
+				2DE9F09A1944F65F00B27B6C /* ViewController.m */,
+				2DE9F112194540CA00B27B6C /* SecondViewController.h */,
+				2DE9F113194540CA00B27B6C /* SecondViewController.m */,
+				2DE9F09C1944F65F00B27B6C /* Images.xcassets */,
+				2DE9F08B1944F65E00B27B6C /* Supporting Files */,
+				2DE9F0B919451F5700B27B6C /* Settings.bundle */,
+				2DBFA0AF194A15F200BEA43B /* Field.h */,
+				2DBFA0B0194A15F200BEA43B /* Field.m */,
+				2D198AD4196DAB9D007E3BA4 /* Data.h */,
+				2D198AD5196DAB9D007E3BA4 /* Data.m */,
+				2DF4589F19A84A1800E7F4C6 /* Submit.h */,
+				2DF458A019A84A1800E7F4C6 /* Submit.m */,
+			);
+			path = FarmHand;
+			sourceTree = "<group>";
+		};
+		2DE9F08B1944F65E00B27B6C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2DE9F08C1944F65E00B27B6C /* FuelTracker-Info.plist */,
+				2DE9F08D1944F65E00B27B6C /* InfoPlist.strings */,
+				2DE9F0901944F65E00B27B6C /* main.m */,
+				2DE9F0921944F65E00B27B6C /* FuelTracker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2DE9F0A91944F65F00B27B6C /* FarmHandTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DE9F0AF1944F65F00B27B6C /* FarmHandTests.m */,
+				2DE9F0AA1944F65F00B27B6C /* Supporting Files */,
+			);
+			path = FarmHandTests;
+			sourceTree = "<group>";
+		};
+		2DE9F0AA1944F65F00B27B6C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2DE9F0AB1944F65F00B27B6C /* FuelTrackerTests-Info.plist */,
+				2DE9F0AC1944F65F00B27B6C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2DE9F0BB1945268800B27B6C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2D46DDB41A26F76400D9762C /* MercerCanyons_Logo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DE9F0801944F65E00B27B6C /* FuelTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DE9F0B31944F65F00B27B6C /* Build configuration list for PBXNativeTarget "FuelTracker" */;
+			buildPhases = (
+				2DE9F07D1944F65E00B27B6C /* Sources */,
+				2DE9F07E1944F65E00B27B6C /* Frameworks */,
+				2DE9F07F1944F65E00B27B6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FuelTracker;
+			productName = FarmHand;
+			productReference = 2DE9F0811944F65E00B27B6C /* FuelTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DE9F0A11944F65F00B27B6C /* FuelTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DE9F0B61944F65F00B27B6C /* Build configuration list for PBXNativeTarget "FuelTrackerTests" */;
+			buildPhases = (
+				2DE9F09E1944F65F00B27B6C /* Sources */,
+				2DE9F09F1944F65F00B27B6C /* Frameworks */,
+				2DE9F0A01944F65F00B27B6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DE9F0A81944F65F00B27B6C /* PBXTargetDependency */,
+			);
+			name = FuelTrackerTests;
+			productName = FarmHandTests;
+			productReference = 2DE9F0A21944F65F00B27B6C /* FuelTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DE9F0791944F65E00B27B6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Whitware;
+				TargetAttributes = {
+					2DE9F0801944F65E00B27B6C = {
+						DevelopmentTeam = LN7WAMNABJ;
+					};
+					2DE9F0A11944F65F00B27B6C = {
+						TestTargetID = 2DE9F0801944F65E00B27B6C;
+					};
+				};
+			};
+			buildConfigurationList = 2DE9F07C1944F65E00B27B6C /* Build configuration list for PBXProject "FuelTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DE9F0781944F65E00B27B6C;
+			productRefGroup = 2DE9F0821944F65E00B27B6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DE9F0801944F65E00B27B6C /* FuelTracker */,
+				2DE9F0A11944F65F00B27B6C /* FuelTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DE9F07F1944F65E00B27B6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DE9F0BA19451F5700B27B6C /* Settings.bundle in Resources */,
+				2D46DDB51A26F76400D9762C /* MercerCanyons_Logo.png in Resources */,
+				2DE9F09D1944F65F00B27B6C /* Images.xcassets in Resources */,
+				2DE9F08F1944F65E00B27B6C /* InfoPlist.strings in Resources */,
+				2DE9F0981944F65F00B27B6C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DE9F0A01944F65F00B27B6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DE9F0AE1944F65F00B27B6C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DE9F07D1944F65E00B27B6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DE9F114194540CA00B27B6C /* SecondViewController.m in Sources */,
+				2DE9F09B1944F65F00B27B6C /* ViewController.m in Sources */,
+				2DE9F0951944F65E00B27B6C /* AppDelegate.m in Sources */,
+				2DF458A119A84A1800E7F4C6 /* Submit.m in Sources */,
+				2DE9F0911944F65E00B27B6C /* main.m in Sources */,
+				2DBFA0B1194A15F200BEA43B /* Field.m in Sources */,
+				2D198AD6196DAB9D007E3BA4 /* Data.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DE9F09E1944F65F00B27B6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DE9F0B01944F65F00B27B6C /* FarmHandTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DE9F0A81944F65F00B27B6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DE9F0801944F65E00B27B6C /* FuelTracker */;
+			targetProxy = 2DE9F0A71944F65F00B27B6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2DE9F08D1944F65E00B27B6C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DE9F08E1944F65E00B27B6C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2DE9F0961944F65F00B27B6C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DE9F0971944F65F00B27B6C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2DE9F0AC1944F65F00B27B6C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DE9F0AD1944F65F00B27B6C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DE9F0B11944F65F00B27B6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		2DE9F0B21944F65F00B27B6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DE9F0B41944F65F00B27B6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FarmHand/FuelTracker-Prefix.pch";
+				INFOPLIST_FILE = "FarmHand/FuelTracker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PRODUCT_NAME = FuelTracker;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2DE9F0B51944F65F00B27B6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FarmHand/FuelTracker-Prefix.pch";
+				INFOPLIST_FILE = "FarmHand/FuelTracker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PRODUCT_NAME = FuelTracker;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2DE9F0B71944F65F00B27B6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FarmHand.app/FarmHand";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FarmHand/FarmHand-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FarmHandTests/FuelTrackerTests-Info.plist";
+				PRODUCT_NAME = FuelTrackerTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2DE9F0B81944F65F00B27B6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FarmHand.app/FarmHand";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FarmHand/FarmHand-Prefix.pch";
+				INFOPLIST_FILE = "FarmHandTests/FuelTrackerTests-Info.plist";
+				PRODUCT_NAME = FuelTrackerTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DE9F07C1944F65E00B27B6C /* Build configuration list for PBXProject "FuelTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DE9F0B11944F65F00B27B6C /* Debug */,
+				2DE9F0B21944F65F00B27B6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DE9F0B31944F65F00B27B6C /* Build configuration list for PBXNativeTarget "FuelTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DE9F0B41944F65F00B27B6C /* Debug */,
+				2DE9F0B51944F65F00B27B6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DE9F0B61944F65F00B27B6C /* Build configuration list for PBXNativeTarget "FuelTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DE9F0B71944F65F00B27B6C /* Debug */,
+				2DE9F0B81944F65F00B27B6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DE9F0791944F65E00B27B6C /* Project object */;
+}
