@@ -13,8 +13,7 @@ NSString* SYNCFILE = @"syncfile.txt";
 @implementation Submit
 
 -(id)init {
-    saveNotify = 1;
-    failNotify = 1;
+    connections = [[NSMutableDictionary alloc] init];
     
     return self;
 }
@@ -22,26 +21,24 @@ NSString* SYNCFILE = @"syncfile.txt";
 -(void)submitToServerWithBody:(NSString*)body onComplete:(void (^)(BOOL success, NSString* msg))complete {
     onComplete = complete;
     
-    if ([body length] == 0) return;
+    //Make sure we have a body, and that we're not already submitting that.
+    if ([body length] == 0 || [connections objectForKey:body] != nil) return;
     
-    errMsg = nil;
-    NSString* surl = [NSString stringWithFormat:@"http://www.mercerdata.com/newservice.php?farmid=%d", FarmID];
-    NSURL* url = [NSURL URLWithString:surl];
-    NSMutableURLRequest* req = [NSMutableURLRequest requestWithURL:url
-                                                       cachePolicy:NSURLRequestReloadIgnoringCacheData
-                                                   timeoutInterval:30];
-    
-    [req setHTTPMethod:@"post"];
-    [req setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
-    inetdata = [[NSMutableData alloc] init];
-    
-    NSURLConnection* conn = [[NSURLConnection alloc] initWithRequest:req
-                                           delegate:self
-                                   startImmediately:YES];
-    
-    if (savesInProgress == nil)
-        savesInProgress = [[NSMutableArray alloc] init];
-    [savesInProgress addObject:body];
+    if ([connections count] == 0) {
+        failNotify = 1;
+    }
+    SubmitConnection* sc = [[SubmitConnection alloc] initWithBody:body forParent:self];
+    [connections setObject:sc forKey:body];
+    [sc start];
+}
+
+-(void)submitFinished:(SubmitConnection *)sc withError:(NSString*)err {
+    [connections removeObjectForKey:[sc body]];
+
+    if ([err length] > 0)
+        [self saveFailed:err forBody:[sc body]];
+    else
+        [self saveSucceededForBody:[sc body]];
 }
 
 -(void)connection:(NSURLConnection *)conn didReceiveData:(NSData *)data {
@@ -56,8 +53,6 @@ NSString* SYNCFILE = @"syncfile.txt";
 }
 
 -(void)saveFailed:(NSString*)msg forBody:(NSString*)body {
-    errMsg = msg;
-    
     NSString* docdir = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* failfile = [docdir stringByAppendingPathComponent:SYNCFILE];
     NSString* fails = [NSString stringWithContentsOfFile:failfile encoding:NSUTF8StringEncoding error:nil];
@@ -68,57 +63,13 @@ NSString* SYNCFILE = @"syncfile.txt";
     
     failNotify--;
     if (failNotify == 0) {
-        onComplete(NO, errMsg);
+        onComplete(NO, msg);
     }
 }
 
--(void)connectionDidFinishLoading:(NSURLConnection*) conn {
-    NSString* body = [[NSString alloc] initWithData:[[conn originalRequest] HTTPBody] encoding:NSUTF8StringEncoding];
-    [savesInProgress removeObject:body];
-    
-    NSXMLParser *parser = [[NSXMLParser alloc] initWithData:inetdata];
-    [parser setDelegate:self];
-    [parser parse];
-    
-    saveNotify--;
-    if (saveNotify == 0 && failNotify > 0 && errMsg == nil)
+-(void)saveSucceededForBody:(NSString*) body {
+    if ([connections count] == 0 && failNotify > 0)
         onComplete(YES, nil);
-    else {
-        [self saveFailed:errMsg forBody:body];
-        onComplete(NO, errMsg);
-    }
-}
-
--(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
-    currentElement = elementName;
-    if ([elementName isEqualToString:@"err"]) {
-        xmldata = [[NSMutableString alloc] init];
-    }
-    else if ([elementName isEqualToString:@"sql"]) {
-        xmldata = [[NSMutableString alloc] init];
-    }
-}
-
--(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    if ([currentElement isEqualToString:@"err"] || [currentElement isEqualToString:@"sql"])
-        [xmldata appendString:string];
-}
-
--(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-    if ([elementName isEqualToString:@"err"]) {
-        [xmldata appendString:@". Your data has been saved to this device. You can re-save later by pressing 'Save to server'"];
-        errMsg = xmldata;
-    }
-    /*
-    else if ([elementName isEqualToString:@"sql"]) {
-         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"SQL"
-         message:xmldata
-         delegate:nil
-         cancelButtonTitle:@"OK"
-         otherButtonTitles:nil];
-         [alert show];
-    }
-     */
 }
 
 -(void)sendEmailFromViewController:(UIViewController*) vc {

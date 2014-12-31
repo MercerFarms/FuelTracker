@@ -10,17 +10,17 @@
 #import <Foundation/Foundation.h>
 #import <MessageUI/MessageUI.h>
 #import "Data.h"
+#import "SubmitConnection.h"
 
 extern NSString* SYNCFILE;
 
-@interface Submit : NSObject<NSXMLParserDelegate, MFMailComposeViewControllerDelegate> {
-    int saveNotify;
+@interface Submit : NSObject<MFMailComposeViewControllerDelegate> {
     int failNotify;
     NSMutableArray* savesInProgress;
-    NSString* errMsg;
     NSMutableData* inetdata;
     NSString* currentElement;
     NSMutableString* xmldata;
+    NSMutableDictionary* connections;
     
     void (^onComplete)(BOOL, NSString*);
     
@@ -29,5 +29,5 @@ extern NSString* SYNCFILE;
 
 -(id)init;
 -(void)submitToServerWithBody:(NSString*)body onComplete:(void (^)(BOOL success, NSString* msg))complete;
-
+-(void)submitFinished:(SubmitConnection *)sc withError:(NSString*)err;
 @end
