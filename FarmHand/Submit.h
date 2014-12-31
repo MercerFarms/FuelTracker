@@ -5,6 +5,7 @@
 //  Created by Peter Tucker on 8/22/14.
 //  Copyright (c) 2014 Whitware. All rights reserved.
 //
+//  GoDaddy: mercerdata, Prosser#1
 
 #import <Foundation/Foundation.h>
 #import <MessageUI/MessageUI.h>
@@ -27,7 +28,6 @@ extern NSString* SYNCFILE;
 }
 
 -(id)init;
--(void)submitToServerOnComplete:(void (^)(BOOL success, NSString* msg))complete;
 -(void)submitToServerWithBody:(NSString*)body onComplete:(void (^)(BOOL success, NSString* msg))complete;
 
 @end

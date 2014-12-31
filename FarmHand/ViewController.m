@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
 
-    locationErrorAlert = NO;
+    locationErrorAlert = 0;
     cLocations = 0;
     defs = [NSUserDefaults standardUserDefaults];
     
@@ -180,10 +180,9 @@
     [[NSFileManager defaultManager] removeItemAtPath:failfile error:nil];
     
     [btnSync setEnabled:NO];
-    
-    conn = [[Submit alloc] init];
+    if (conn == nil)
+        conn = [[Submit alloc] init];
     for (NSString* body in resends) {
-        //[self submitToServerWithBody:body];
         [conn submitToServerWithBody:body onComplete:^(BOOL s, NSString* m) {
             [self submitComplete:s withMessage:m];
         }];
@@ -229,14 +228,13 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     //Don't allow it to re-sort the fields if we're currently re-sorting fields
-    locationErrorAlert = NO;
-    cLocations++;
+    locationErrorAlert = 0;
     [lblLatitude setText:[NSString stringWithFormat:@"(%d) lat: %f",
                           cLocations, [[self currentLoc] coordinate].latitude]];
     [lblLongitude setText:[NSString stringWithFormat:@"(%d) long: %f",
                            cLocations, [[self currentLoc] coordinate].longitude]];
     if (!isSorting && [locations count] > 0) {
-        cLocations++;
+        cLocations = (cLocations+1) % 1000;
         CLLocation* loc = [locations objectAtIndex:[locations count] - 1];
         
         [lblLatitude setText:[NSString stringWithFormat:@"(%d) lat: %f",
@@ -276,8 +274,8 @@
                      [error localizedDescription], [error localizedFailureReason]];
     if ([error code] == kCLErrorDenied)
         [[self locationManager] stopUpdatingLocation];
-    else if (locationErrorAlert == NO) {
-        locationErrorAlert = YES;
+    else if (locationErrorAlert == 5) {
+        locationErrorAlert++;
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error retrieving location"
                                                         message:msg
                                                        delegate:nil
@@ -285,6 +283,8 @@
                                               otherButtonTitles:nil];
         [alert show];
     }
+    else
+        locationErrorAlert++;
 }
 
 -(double)distanceToField:(Field*)f {

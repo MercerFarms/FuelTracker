@@ -19,20 +19,6 @@ NSString* SYNCFILE = @"syncfile.txt";
     return self;
 }
 
--(void)submitToServerOnComplete:(void (^)(BOOL success, NSString* msg))complete {
-	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	[dateFormatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
-	NSString* ts = [dateFormatter stringFromDate:[NSDate date]];
-    
-    NSString* body = [NSString stringWithFormat:@"FuelID=%@&OpID=%@&UnitID=%@&ImpID=%@&Field=%@&UnitHours=%@&ServiceDue=%@&Diesel=%@&DEF=%@&MotorOil=%@&HydraulicOil=%@&CabInsp=%@&Time=%@",
-                      FuelTruckOperatorID, OperatorID, UnitID, ImplementID, FieldName, UnitHours,
-                      Reminders, GallonsDiesel, GallonsDEF, (MotorOil ? @"1" : @"0"),
-                      (HydraulicOil ? @"1" : @"0"), (Inspection ? @"1" : @"0"), ts
-                      ];
-    
-    [self submitToServerWithBody:body onComplete:complete];
-}
-
 -(void)submitToServerWithBody:(NSString*)body onComplete:(void (^)(BOOL success, NSString* msg))complete {
     onComplete = complete;
     

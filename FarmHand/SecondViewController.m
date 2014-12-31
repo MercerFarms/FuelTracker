@@ -128,9 +128,9 @@
     [btnSave setEnabled:NO];
     [btnSync setEnabled:NO];
     
-    conn = [[Submit alloc] init];
+    if (conn == nil)
+        conn = [[Submit alloc] init];
     for (NSString* body in resends) {
-        //[self submitToServerWithBody:body];
         [conn submitToServerWithBody:body onComplete:^(BOOL s, NSString* m) {
             [self submitComplete:s withMessage:m];
         }];
@@ -151,8 +151,8 @@
     [btnSave setEnabled:NO];
     [btnSync setEnabled:NO];
 
-    //[self submitToServerWithBody:body];
-    conn = [[Submit alloc] init];
+    if (conn == nil)
+        conn = [[Submit alloc] init];
     [conn submitToServerWithBody:body onComplete:^(BOOL s, NSString* m) {
         [self submitComplete:s withMessage:m];
     }];

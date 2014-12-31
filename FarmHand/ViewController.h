@@ -40,7 +40,7 @@
     NSMutableArray* fieldsStore;
     NSMutableData* inetdata;
     double latMin, latMax, longMin, longMax;
-    BOOL locationErrorAlert;
+    int locationErrorAlert;
     
     NSUserDefaults* defs;
     
