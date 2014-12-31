@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2D198AD6196DAB9D007E3BA4 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D198AD5196DAB9D007E3BA4 /* Data.m */; };
-		2D46DDB51A26F76400D9762C /* MercerCanyons_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D46DDB41A26F76400D9762C /* MercerCanyons_Logo.png */; };
 		2D86AB33196DB27500F6BFC5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D86AB32196DB27500F6BFC5 /* MessageUI.framework */; };
+		2DB73B961A548D880060BC73 /* MercerCanyons_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DB73B951A548D880060BC73 /* MercerCanyons_Logo.png */; };
 		2DBFA0B1194A15F200BEA43B /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFA0B0194A15F200BEA43B /* Field.m */; };
 		2DBFA0B3194A209400BEA43B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBFA0B2194A209400BEA43B /* CoreLocation.framework */; };
 		2DE9F0851944F65E00B27B6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F0841944F65E00B27B6C /* Foundation.framework */; };
@@ -44,8 +44,8 @@
 /* Begin PBXFileReference section */
 		2D198AD4196DAB9D007E3BA4 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		2D198AD5196DAB9D007E3BA4 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
-		2D46DDB41A26F76400D9762C /* MercerCanyons_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MercerCanyons_Logo.png; path = ../../../../../Dropbox/FarmHand/MercerCanyons_Logo.png; sourceTree = "<group>"; };
 		2D86AB32196DB27500F6BFC5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		2DB73B951A548D880060BC73 /* MercerCanyons_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MercerCanyons_Logo.png; sourceTree = "<group>"; };
 		2DBFA0AF194A15F200BEA43B /* Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Field.h; sourceTree = "<group>"; };
 		2DBFA0B0194A15F200BEA43B /* Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Field.m; sourceTree = "<group>"; };
 		2DBFA0B2194A209400BEA43B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -189,7 +189,7 @@
 		2DE9F0BB1945268800B27B6C /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				2D46DDB41A26F76400D9762C /* MercerCanyons_Logo.png */,
+				2DB73B951A548D880060BC73 /* MercerCanyons_Logo.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DE9F0BA19451F5700B27B6C /* Settings.bundle in Resources */,
-				2D46DDB51A26F76400D9762C /* MercerCanyons_Logo.png in Resources */,
+				2DB73B961A548D880060BC73 /* MercerCanyons_Logo.png in Resources */,
 				2DE9F09D1944F65F00B27B6C /* Images.xcassets in Resources */,
 				2DE9F08F1944F65E00B27B6C /* InfoPlist.strings in Resources */,
 				2DE9F0981944F65F00B27B6C /* Main.storyboard in Resources */,
@@ -434,7 +434,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FarmHand/FuelTracker-Prefix.pch";
 				INFOPLIST_FILE = "FarmHand/FuelTracker-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = FuelTracker;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -451,7 +451,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FarmHand/FuelTracker-Prefix.pch";
 				INFOPLIST_FILE = "FarmHand/FuelTracker-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = FuelTracker;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
