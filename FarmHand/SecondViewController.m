@@ -181,6 +181,8 @@
     }
     [btnSave setEnabled:YES];
     [btnSync setEnabled:YES];
+    
+    [[self navigationController] popToRootViewControllerAnimated:YES];
 }
 
 -(void)goEnglish {

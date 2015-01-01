@@ -43,8 +43,6 @@
     if ([currSysVer compare:authorizationVersion options:NSNumericSearch] != NSOrderedAscending)
         [[self locationManager] requestAlwaysAuthorization];
     [[self locationManager] setDelegate:self];
-    [[self locationManager] startUpdatingLocation];
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -58,6 +56,8 @@
     [textOperator setKeyboardType:UIKeyboardTypeNumberPad];
     [textImplement setKeyboardType:UIKeyboardTypeNumberPad];
     
+    [[self locationManager] startUpdatingLocation];
+
     CLLocation* loc = [[self locationManager] location];
     [self setCurrentLoc: loc];
     [lblLatitude setText:[NSString stringWithFormat:@"(%d) lat: %f",
