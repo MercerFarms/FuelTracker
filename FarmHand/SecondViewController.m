@@ -182,6 +182,7 @@
     [btnSave setEnabled:YES];
     [btnSync setEnabled:YES];
     
+    DidSave = true;
     [[self navigationController] popToRootViewControllerAnimated:YES];
 }
 

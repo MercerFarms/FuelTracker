@@ -24,6 +24,7 @@ NSString* Timestamp;
 BOOL MotorOil = false;
 BOOL HydraulicOil = false;
 BOOL Inspection = false;
+BOOL DidSave = false;
 
 @implementation Data
 

@@ -24,6 +24,7 @@ extern NSString* Timestamp;
 extern BOOL MotorOil;
 extern BOOL HydraulicOil;
 extern BOOL Inspection;
+extern BOOL DidSave;
 
 @interface Data : NSObject
 

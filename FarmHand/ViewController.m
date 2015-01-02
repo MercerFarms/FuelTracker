@@ -43,6 +43,8 @@
     if ([currSysVer compare:authorizationVersion options:NSNumericSearch] != NSOrderedAscending)
         [[self locationManager] requestAlwaysAuthorization];
     [[self locationManager] setDelegate:self];
+    
+    DidSave = false;
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -55,6 +57,11 @@
     [textUnit setKeyboardType:UIKeyboardTypeNumberPad];
     [textOperator setKeyboardType:UIKeyboardTypeNumberPad];
     [textImplement setKeyboardType:UIKeyboardTypeNumberPad];
+    
+    if (DidSave) {
+        [self reset:nil];
+        DidSave = false;
+    }
     
     [[self locationManager] startUpdatingLocation];
 
