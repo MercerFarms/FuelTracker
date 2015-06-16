@@ -85,6 +85,12 @@
     Inspection = [switchInspection isOn];
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    //Iterate through your subviews, or some other custom array of views
+    for (UIView *view in self.view.subviews)
+        [view resignFirstResponder];
+}
+
 -(IBAction)changeLanguage:(id)sender {
     NSString* lang = @"English";
     if ([switchLanguage isOn]) {
@@ -187,10 +193,22 @@
 }
 
 -(void)goEnglish {
-    [lblUnitHours setText:@"Unit Hours"];
-    [lblService setText:@"Service Due"];
-    [lblGallonsDiesel setText:@"Gallons of Diesel"];
-    [lblGallonsDEF setText:@"Gallons of DEF"];
+    if (lblUnitHours != nil)
+        [lblUnitHours setText:@"Unit Hours"];
+    else
+        [textUnitHours setPlaceholder:@"Unit Hours"];
+    if (lblService != nil)
+        [lblService setText:@"Service Due"];
+    else
+        [textReminders setPlaceholder:@"Service Due"];
+    if (lblGallonsDiesel != nil)
+        [lblGallonsDiesel setText:@"Gallons of Diesel"];
+    else
+        [textGallonsDiesel setPlaceholder:@"Gallons of Diesel"];
+    if (lblGallonsDEF != nil)
+        [lblGallonsDEF setText:@"Gallons of DEF"];
+    else
+        [textGallonsDEF setPlaceholder:@"Gallons of DEF"];
     [lblMotorOil setText:@"Motor Oil"];
     [lblHydraulicOil setText:@"Hydraulic Oil"];
     [lblInspection setText:@"Cab Inspection"];
@@ -200,10 +218,22 @@
 }
 
 -(void)goSpanish {
-    [lblUnitHours setText:@"Horas de la Unidad"];
-    [lblService setText:@"Se Necesita Servicio a Las"];
-    [lblGallonsDiesel setText:@"Galones de Diesel"];
-    [lblGallonsDEF setText:@"Galones de DEF"];
+    if (lblUnitHours != nil)
+        [lblUnitHours setText:@"Horas de la Unidad"];
+    else
+        [textUnitHours setPlaceholder:@"Horas de la Unidad"];
+    if (lblService != nil)
+        [lblService setText:@"Se Necesita Servicio a Las"];
+    else
+        [textReminders setPlaceholder:@"Se Necesita Servicio a Las"];
+    if (lblGallonsDiesel != nil)
+        [lblGallonsDiesel setText:@"Galones de Diesel"];
+    else
+        [textGallonsDiesel setPlaceholder:@"Galones de Diesel"];
+    if (lblGallonsDEF != nil)
+        [lblGallonsDEF setText:@"Galones de DEF"];
+    else
+        [textGallonsDEF setPlaceholder:@"Galones de DEF"];
     [lblMotorOil setText:@"Aceite del Motor"];
     [lblHydraulicOil setText:@"Aceite Hidraulico"];
     [lblInspection setText:@"Inspeccion de Cabina"];

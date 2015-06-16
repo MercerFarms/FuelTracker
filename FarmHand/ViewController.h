@@ -23,6 +23,9 @@
     IBOutlet UITextField* textUnit;
     IBOutlet UITextField* textImplement;
     IBOutlet UITextField* textOperator;
+    
+    IBOutlet UIButton* btnStartMeter;
+    IBOutlet UIButton* btnEndMeter;
 
     IBOutlet UIButton* btnReset;
     IBOutlet UIButton* btnNext;
@@ -55,5 +58,7 @@
 -(IBAction)changeLanguage:(id)sender;
 -(IBAction)reset:(id)sender;
 -(IBAction)syncData:(id)sender;
+-(IBAction)submitStartMeterToServer:(id)sender;
+-(IBAction)submitEndMeterToServer:(id)sender;
 
 @end

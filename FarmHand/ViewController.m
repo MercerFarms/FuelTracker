@@ -23,8 +23,8 @@
     locationErrorAlert = 0;
     cLocations = 0;
     defs = [NSUserDefaults standardUserDefaults];
-    
-    if ([defs stringForKey:@"Language"] != nil &&
+
+    if ([defs stringForKey:@"Language"] == nil ||
         [[defs stringForKey:@"Language"] isEqualToString:@"English"]) {
         [self goEnglish];
         [switchLanguage setOn:false];
@@ -96,8 +96,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    //Iterate through your subviews, or some other custom array of views
+    for (UIView *view in self.view.subviews)
+        [view resignFirstResponder];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [fields count];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 24;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -106,6 +116,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:@"loadedFields"];
     
+    CGRect frm = [cell frame];
+    frm.size.height = 24;
+    [cell setFrame:frm];
+    frm = [[cell textLabel] frame];
+    frm.size.height = 24;
+    [[cell textLabel] setFrame:frm];
+    UIFont* fnt = [[cell textLabel] font];
+    [[cell textLabel] setFont:[UIFont fontWithName:[fnt fontName] size:14]];
     [[cell textLabel] setText:[[fields objectAtIndex:[indexPath row]] description]];
     if ([FieldName isEqualToString:[[fields objectAtIndex:[indexPath row]] description]])
         [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
@@ -173,6 +191,50 @@
     [textUnit setText:@""];
     [textImplement setText:@""];
     [textOperator setText:@""];
+}
+
+-(IBAction)submitStartMeterToServer:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Start Meter"
+                                                    message:@"What is the start meter reading?"
+                                                   delegate:self
+                                          cancelButtonTitle:@"Done"
+                                          otherButtonTitles:@"Cancel", nil];
+    [alert setTag:1];
+    [alert setAlertViewStyle: UIAlertViewStylePlainTextInput];
+    [alert show];
+}
+
+-(IBAction)submitEndMeterToServer:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"End Meter"
+                                                    message:@"What is the end meter reading?"
+                                                   delegate:self
+                                          cancelButtonTitle:@"Done"
+                                          otherButtonTitles:@"Cancel", nil];
+    [alert setTag:2];
+    [alert setAlertViewStyle: UIAlertViewStylePlainTextInput];
+    [alert show];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"%@", [alertView textFieldAtIndex:0].text);
+    
+    if (buttonIndex == 0 && [[[alertView textFieldAtIndex:0] text] length] > 0) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+        NSString* ts = [dateFormatter stringFromDate:[NSDate date]];
+    
+        NSString* body = ([alertView tag] == 1) ?
+                            [NSString stringWithFormat:@"TruckID=1&StartMeter=%@&Day=%@",
+                             [alertView textFieldAtIndex:0].text, ts] :
+                            [NSString stringWithFormat:@"TruckID=1&EndMeter=%@&Day=%@",
+                             [alertView textFieldAtIndex:0].text, ts];
+    
+        if (conn == nil)
+            conn = [[Submit alloc] init];
+        [conn submitToServerWithBody:body onComplete:^(BOOL s, NSString* m) {
+            [self submitComplete:s withMessage:m];
+        }];
+    }
 }
 
 -(IBAction)syncData:(id)sender {
@@ -324,22 +386,46 @@
 }
 
 -(void)goEnglish {
-    [lblFuelTruckOperator setText:@"Fuel Truck Operator #:"];
+    if (lblFuelTruckOperator != nil)
+        [lblFuelTruckOperator setText:@"Fuel Truck Operator #:"];
+    else
+        [textFuelTruckOperator setPlaceholder:@"Fuel Truck Op. #"];
     [lblField setText:@"Field:"];
-    [lblUnit setText:@"Unit #:"];
-    [lblOperator setText:@"Operator #:"];
-    [lblImplement setText:@"Implement:"];
+    if (lblUnit != nil)
+        [lblUnit setText:@"Unit #:"];
+    else
+        [textUnit setPlaceholder:@"Unit #"];
+    if (lblOperator != nil)
+        [lblOperator setText:@"Operator #:"];
+    else
+        [textOperator setPlaceholder:@"Operator #"];
+    if (lblImplement != nil)
+        [lblImplement setText:@"Implement:"];
+    else
+        [textImplement setPlaceholder:@"Implement"];
     
     [btnReset setTitle:@"reset" forState:UIControlStateNormal];
     [btnNext setTitle:@"next" forState:UIControlStateNormal];
 }
 
 -(void)goSpanish {
-    [lblFuelTruckOperator setText:@"Operador de Combustible #:"];
+    if (lblFuelTruckOperator != nil)
+        [lblFuelTruckOperator setText:@"Operador de Combustible #:"];
+    else
+        [textFuelTruckOperator setPlaceholder:@"Oper de Combust #"];
     [lblField setText:@"Campo:"];
-    [lblUnit setText:@"Unidad #:"];
-    [lblOperator setText:@"Operador #:"];
-    [lblImplement setText:@"Implemento:"];
+    if (lblUnit != nil)
+        [lblUnit setText:@"Unidad #:"];
+    else
+        [textUnit setPlaceholder:@"Unidad #"];
+    if (lblOperator != nil)
+        [lblOperator setText:@"Operador #:"];
+    else
+        [textOperator setPlaceholder:@"Operador #"];
+    if (lblImplement != nil)
+        [lblImplement setText:@"Implemento:"];
+    else
+        [textImplement setPlaceholder:@"Implemento"];
     
     [btnReset setTitle:@"restaurar" forState:UIControlStateNormal];
     [btnNext setTitle:@"proximo" forState:UIControlStateNormal];
