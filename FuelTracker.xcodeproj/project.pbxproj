@@ -13,6 +13,10 @@
 		2DB73B991A548F180060BC73 /* SubmitConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB73B981A548F180060BC73 /* SubmitConnection.m */; };
 		2DBFA0B1194A15F200BEA43B /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFA0B0194A15F200BEA43B /* Field.m */; };
 		2DBFA0B3194A209400BEA43B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBFA0B2194A209400BEA43B /* CoreLocation.framework */; };
+		2DC9167A1B1CA3B60071431C /* Main_iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC916791B1CA3B60071431C /* Main_iphone.storyboard */; };
+		2DC916841B1CCC340071431C /* MercerCanyons_Icon40.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC916811B1CCC340071431C /* MercerCanyons_Icon40.png */; };
+		2DC916851B1CCC340071431C /* MercerCanyons_Icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC916821B1CCC340071431C /* MercerCanyons_Icon80.png */; };
+		2DC916861B1CCC340071431C /* MercerCanyons_Icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC916831B1CCC340071431C /* MercerCanyons_Icon120.png */; };
 		2DE9F0851944F65E00B27B6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F0841944F65E00B27B6C /* Foundation.framework */; };
 		2DE9F0871944F65E00B27B6C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F0861944F65E00B27B6C /* CoreGraphics.framework */; };
 		2DE9F0891944F65E00B27B6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE9F0881944F65E00B27B6C /* UIKit.framework */; };
@@ -52,6 +56,10 @@
 		2DBFA0AF194A15F200BEA43B /* Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Field.h; sourceTree = "<group>"; };
 		2DBFA0B0194A15F200BEA43B /* Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Field.m; sourceTree = "<group>"; };
 		2DBFA0B2194A209400BEA43B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2DC916791B1CA3B60071431C /* Main_iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iphone.storyboard; sourceTree = "<group>"; };
+		2DC916811B1CCC340071431C /* MercerCanyons_Icon40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MercerCanyons_Icon40.png; sourceTree = "<group>"; };
+		2DC916821B1CCC340071431C /* MercerCanyons_Icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MercerCanyons_Icon80.png; sourceTree = "<group>"; };
+		2DC916831B1CCC340071431C /* MercerCanyons_Icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MercerCanyons_Icon120.png; sourceTree = "<group>"; };
 		2DE9F0811944F65E00B27B6C /* FuelTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuelTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE9F0841944F65E00B27B6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2DE9F0861944F65E00B27B6C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -143,6 +151,7 @@
 				2DE9F0931944F65E00B27B6C /* AppDelegate.h */,
 				2DE9F0941944F65E00B27B6C /* AppDelegate.m */,
 				2DE9F0961944F65F00B27B6C /* Main.storyboard */,
+				2DC916791B1CA3B60071431C /* Main_iphone.storyboard */,
 				2DE9F0991944F65F00B27B6C /* ViewController.h */,
 				2DE9F09A1944F65F00B27B6C /* ViewController.m */,
 				2DE9F112194540CA00B27B6C /* SecondViewController.h */,
@@ -194,6 +203,9 @@
 		2DE9F0BB1945268800B27B6C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2DC916811B1CCC340071431C /* MercerCanyons_Icon40.png */,
+				2DC916821B1CCC340071431C /* MercerCanyons_Icon80.png */,
+				2DC916831B1CCC340071431C /* MercerCanyons_Icon120.png */,
 				2DB73B951A548D880060BC73 /* MercerCanyons_Logo.png */,
 			);
 			name = Images;
@@ -280,8 +292,12 @@
 			files = (
 				2DE9F0BA19451F5700B27B6C /* Settings.bundle in Resources */,
 				2DB73B961A548D880060BC73 /* MercerCanyons_Logo.png in Resources */,
+				2DC916841B1CCC340071431C /* MercerCanyons_Icon40.png in Resources */,
+				2DC9167A1B1CA3B60071431C /* Main_iphone.storyboard in Resources */,
+				2DC916851B1CCC340071431C /* MercerCanyons_Icon80.png in Resources */,
 				2DE9F09D1944F65F00B27B6C /* Images.xcassets in Resources */,
 				2DE9F08F1944F65E00B27B6C /* InfoPlist.strings in Resources */,
+				2DC916861B1CCC340071431C /* MercerCanyons_Icon120.png in Resources */,
 				2DE9F0981944F65F00B27B6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +459,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = FuelTracker;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -460,6 +477,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = FuelTracker;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
