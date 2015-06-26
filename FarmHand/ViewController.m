@@ -56,7 +56,6 @@
     [textFuelTruckOperator setKeyboardType:UIKeyboardTypeNumberPad];
     [textUnit setKeyboardType:UIKeyboardTypeNumberPad];
     [textOperator setKeyboardType:UIKeyboardTypeNumberPad];
-    [textImplement setKeyboardType:UIKeyboardTypeNumberPad];
     
     if (DidSave) {
         [self reset:nil];
